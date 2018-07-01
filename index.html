@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700,900" rel="stylesheet">
+  <script src="https://unpkg.com/idb@2.0.4/lib/idb.js"></script>
+  <link rel="stylesheet" href="style/index.css">
+</head>
+
+<body onload="fetchCurrencies()">
+  <div id="app">
+    <main class="container">
+      <section class="boxes">
+        <div class="box box-left">
+          <h4 class="app-title">currency &nbsp;converter</h4>
+          <div class="app-info">
+            <p class="small-text">You have</p>
+            <h1 id="conversion" class="main-text">0.00</h1>
+            <p class="small-text">in your account</p>
+          </div>
+        </div>
+        <div class="box box-right">
+          <div class="currency-btn-group">
+            <div class="input-group">
+              <label for="input-currency" class="label small-text">enter amount</label>
+              <input type="number" class="text-field" id="input-currency">
+            </div>
+            <div class="input-group">
+              <label for="input-currency" class="label small-text">from</label>
+              <select name="currency-from" class="currency-names" id="currency-from">
+                <option value="--">select a currency</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="currency-to" class="label small-text">to</label>
+              <select name="currency-to" class="currency-names" id="currency-to">
+                <option value="--">select a currency</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <button id="submit" onclick="submit()" class="currency-btn small-text">convert currency</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/app.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('sw.js', { scope: '' })
+        .then(function () {
+          console.log('Congratulations!!Service Worker Registered');
+        })
+        .catch(function (err) {
+          console.log(`Aagh! Some kind of Error :- ${err}`);
+        });
+    } else {
+      //still not supported
+    }
+  </script>
+</body>
+
+</html>

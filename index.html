@@ -14,35 +14,35 @@
 
 <body onload="fetchCurrencies()">
   <div id="app">
-    <main class="container">
-      <section class="boxes">
-        <div class="box box-left">
-          <h4 class="app-title">currency &nbsp;converter</h4>
-          <div class="app-info">
-            <p class="small-text">You have</p>
-            <h1 id="conversion" class="main-text">0.00</h1>
-            <p class="small-text">in your account</p>
+    <main>
+      <section>
+        <div>
+          <h4>currency &nbsp;converter</h4>
+          <div>
+            <p>You have</p>
+            <h1 id="conversion">0.00</h1>
+            <p>in your account</p>
           </div>
         </div>
-        <div class="box box-right">
-          <div class="currency-btn-group">
-            <div class="input-group">
-              <label for="input-currency" class="label small-text">enter amount</label>
-              <input type="number" class="text-field" id="input-currency">
+        <div>
+          <div>
+            <div>
+              <label for="input-currency">enter amount</label>
+              <input type="number" id="input-currency">
             </div>
-            <div class="input-group">
-              <label for="input-currency" class="label small-text">from</label>
-              <select name="currency-from" class="currency-names" id="currency-from">
+            <div>
+              <label for="input-currency">from</label>
+              <select name="currency-from" id="currency-from">
                 <option value="--">select a currency</option>
               </select>
             </div>
-            <div class="input-group">
-              <label for="currency-to" class="label small-text">to</label>
-              <select name="currency-to" class="currency-names" id="currency-to">
+            <div>
+              <label for="currency-to">to</label>
+              <select name="currency-to" id="currency-to">
                 <option value="--">select a currency</option>
               </select>
             </div>
-            <div class="input-group">
+            <div>
               <button id="submit" onclick="submit()" class="currency-btn small-text">convert currency</button>
             </div>
           </div>

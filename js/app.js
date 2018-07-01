@@ -45,7 +45,7 @@ const submit = () => {
     .then(res => {
       const convert = res[key] * inputValue.value;
       outputValue.innerText = convert.toFixed(2);
-      // button.innerText = "convert currency";
+      button.innerText = "convert currency";
 
     })
     .catch(err => {

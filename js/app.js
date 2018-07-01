@@ -36,7 +36,7 @@ const submit = () => {
   const convertTo = currencyInputTo.value;
   const key = `${convertFrom}_${convertTo}`;
   console.log(outputValue)
-  button.innerText = "loading...";
+  button.innerText = "loading..";
   fetch(
     `https://free.currencyconverterapi.com/api/v5/convert?q=${key}&compact=ultra`
   )
@@ -50,6 +50,7 @@ const submit = () => {
     })
     .catch(err => {
       button.innerText = "convert currency";
+
     });
 
 }
